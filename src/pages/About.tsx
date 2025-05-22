@@ -8,28 +8,12 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: 'Dr. Fatima El Mansouri',
+      name: 'Dr. Zineb Bennani',
       title: 'Lead Veterinarian',
       experience: '15',
-      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face',
-      specialties: ['Surgery', 'Internal Medicine', 'Emergency Care'],
-      description: 'Dr. El Mansouri has been practicing veterinary medicine for over 15 years and is passionate about providing the highest quality care for all animals.'
-    },
-    {
-      name: 'Dr. Ahmed Benali',
-      title: 'Veterinary Surgeon',
-      experience: '12',
-      image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face',
-      specialties: ['Orthopedic Surgery', 'Dental Care', 'Anesthesiology'],
-      description: 'Specializing in advanced surgical procedures, Dr. Benali ensures every pet receives expert surgical care with compassion and precision.'
-    },
-    {
-      name: 'Dr. Leila Radi',
-      title: 'Small Animal Specialist',
-      experience: '8',
-      image: 'https://images.unsplash.com/photo-1594824473291-71f76b1c8a47?w=400&h=400&fit=crop&crop=face',
-      specialties: ['Dermatology', 'Nutrition', 'Behavioral Health'],
-      description: 'Dr. Radi focuses on preventive care and specialized treatments for small animals, helping pets live healthier, happier lives.'
+      image: '/dr-zineb-bennani.jpg',
+      specialties: ['Surgery', 'Internal Medicine', 'Emergency Care', 'Preventive Medicine'],
+      description: 'Dr. Zineb Bennani is a highly skilled veterinarian with over 10 years of experience in animal healthcare. She is dedicated to providing compassionate and comprehensive care for all animals, with special expertise in surgery and emergency medicine.'
     }
   ];
 
@@ -54,7 +38,7 @@ const About = () => {
               {t('about.mission')}
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Located in the heart of Rabat, we combine modern veterinary technology with 
+              Located in the heart of Rabat, we combine modern veterinary technology with
               traditional compassionate care to provide comprehensive health services for all types of pets.
             </p>
           </div>
@@ -74,42 +58,42 @@ const About = () => {
               {t('about.team')}
             </h2>
             <p className="text-lg text-gray-600">
-              Meet our experienced and dedicated veterinary professionals
+              Meet our lead veterinarian who provides exceptional care for your beloved pets
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex justify-center">
             {teamMembers.map((member, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <div className="mb-6">
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 max-w-xl">
+                <CardContent className="p-8">
+                  <div className="mb-8">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-32 h-32 rounded-full mx-auto object-cover mb-4"
+                      className="w-48 h-48 rounded-full mx-auto object-cover mb-6"
                     />
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
                       {member.name}
                     </h3>
-                    <p className="text-green-600 font-semibold mb-2">
+                    <p className="text-green-600 font-semibold mb-3 text-lg">
                       {member.title}
                     </p>
-                    <p className="text-sm text-gray-500 mb-4">
+                    <p className="text-gray-500 mb-4">
                       {member.experience} {t('about.experience')}
                     </p>
                   </div>
-                  
-                  <div className="mb-4">
+
+                  <div className="mb-6">
                     <div className="flex flex-wrap gap-2 justify-center">
                       {member.specialties.map((specialty, idx) => (
-                        <Badge key={idx} variant="secondary" className="text-xs">
+                        <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
                           {specialty}
                         </Badge>
                       ))}
                     </div>
                   </div>
-                  
-                  <p className="text-sm text-gray-600 leading-relaxed">
+
+                  <p className="text-gray-600 leading-relaxed text-lg">
                     {member.description}
                   </p>
                 </CardContent>

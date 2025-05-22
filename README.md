@@ -94,3 +94,13 @@ Yes, you can connect a custom domain to your GitHub Pages site:
 5. For more details, see [GitHub's documentation on custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## Image Upload Instructions
+
+Please upload the image of Dr. Zineb Bennani to the following location:
+
+```
+public/dr-zineb-bennani.jpg
+```
+
+This image will be displayed on the About page in the "Our Team" section.

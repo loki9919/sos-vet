@@ -58,7 +58,7 @@ export const translations = {
       mission: 'Our mission is to provide compassionate, high-quality veterinary care to pets in Rabat and surrounding areas. We believe every pet deserves the best possible care.',
       whyChoose: 'Why Choose SOS Vet?',
       whyChooseDesc: 'We\'re committed to providing the best possible care for your beloved pets with our experienced team and modern facilities.',
-      team: 'Our Team',
+      team: 'Meet Dr. Zineb Bennani',
       experience: 'years of experience',
       impact: 'Our Impact'
     },
@@ -168,7 +168,7 @@ export const translations = {
       mission: 'Notre mission est de fournir des soins vétérinaires compatissants et de haute qualité aux animaux de compagnie à Rabat et dans les environs. Nous croyons que chaque animal mérite les meilleurs soins possibles.',
       whyChoose: 'Pourquoi Choisir SOS Vet?',
       whyChooseDesc: 'Nous nous engageons à fournir les meilleurs soins possibles pour vos animaux bien-aimés avec notre équipe expérimentée et nos installations modernes.',
-      team: 'Notre Équipe',
+      team: 'Rencontrez Dr. Zineb Bennani',
       experience: 'années d\'expérience',
       impact: 'Notre Impact'
     },
