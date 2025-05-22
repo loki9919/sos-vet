@@ -104,3 +104,9 @@ public/dr-zineb-bennani.png
 ```
 
 This image will be displayed on the About page in the "Our Team" section.
+
+**Important Note**: If the image is not displaying correctly, please check:
+1. The image file exists in the public directory
+2. The image file is a valid PNG image
+3. The image file has the correct permissions
+4. Try clearing your browser cache or using a private/incognito window

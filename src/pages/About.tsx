@@ -11,7 +11,7 @@ const About = () => {
       name: 'Dr. Zineb Bennani',
       title: t('about.doctorTitle'),
       experience: '10',
-      image: '/dr-zineb-bennani.png',
+      image: import.meta.env.BASE_URL + 'dr-zineb-bennani.png',
       specialties: [
         t('about.specialties.surgery'),
         t('about.specialties.internalMedicine'),
@@ -38,13 +38,12 @@ const About = () => {
         {/* Mission Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('about.missionTitle')}</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
               {t('about.mission')}
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Located in the heart of Rabat, we combine modern veterinary technology with
-              traditional compassionate care to provide comprehensive health services for all types of pets.
+              {t('about.missionExtra')}
             </p>
           </div>
           <div className="relative">
@@ -75,7 +74,11 @@ const About = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-48 h-48 rounded-full mx-auto object-cover mb-6"
+                      className="w-48 h-48 rounded-full mx-auto object-cover mb-6 border-4 border-green-500"
+                      onError={(e) => {
+                        console.error("Image failed to load:", e);
+                        e.currentTarget.src = import.meta.env.BASE_URL + 'placeholder.svg';
+                      }}
                     />
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
                       {member.name}
@@ -109,7 +112,7 @@ const About = () => {
 
         {/* Stats Section */}
         <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-lg p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-8">Our Impact</h2>
+          <h2 className="text-3xl font-bold mb-8">{t('about.impact')}</h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
               <div className="text-4xl font-bold mb-2">500+</div>
