@@ -77,8 +77,8 @@ const Services = () => {
                 <p className="text-gray-600 mb-4">
                   {t(`services.${service.key}.description`)}
                 </p>
-                <Button variant="outline" className="w-full group-hover:bg-vet-primary group-hover:text-white transition-colors duration-300 border-vet-primary text-vet-primary">
-                  {t('services.learnMore')}
+                <Button asChild variant="outline" className="w-full group-hover:bg-vet-primary group-hover:text-white transition-colors duration-300 border-vet-primary text-vet-primary">
+                  <Link to={`/services/${service.key}`}>{t('services.learnMore')}</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -94,10 +94,10 @@ const Services = () => {
             {t('contact.emergencyDescription')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-red-600 hover:bg-red-700 hover:scale-105 transition-all duration-300" size="lg">
+            <Button asChild className="bg-vet-primary hover:bg-vet-primary/90 hover:scale-105 transition-all duration-300" size="lg">
               <Link to="/contact">{t('contact.emergencyContact')}</Link>
             </Button>
-            <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50 hover:scale-105 transition-all duration-300" size="lg">
+            <Button variant="outline" className="border-vet-primary text-vet-primary hover:bg-vet-light hover:scale-105 transition-all duration-300" size="lg">
               {t('contact.call')}: +212 537-XX-XX-XX
             </Button>
           </div>

@@ -8,7 +8,7 @@ document.title = 'SOS Vet Rabat - Veterinary Clinic in Morocco';
 
 // Favicon as emoticon
 const setFavicon = () => {
-  const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+  const link = document.querySelector("link[rel*='icon']") as HTMLLinkElement || document.createElement('link');
   link.type = 'image/x-icon';
   link.rel = 'shortcut icon';
   link.href = '/lovable-uploads/73d66a42-a27a-40a9-8f5f-47f69e48c443.png';

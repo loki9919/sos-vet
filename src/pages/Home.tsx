@@ -87,10 +87,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-vet-secondary mb-4">
-              Why Choose SOS Vet?
+              {t('about.whyChoose')}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're committed to providing the best possible care for your beloved pets with our experienced team and modern facilities.
+              {t('about.whyChooseDesc')}
             </p>
           </div>
           
@@ -124,7 +124,7 @@ const Home = () => {
             {t('services.subtitle')}
           </p>
           <Button asChild size="lg" variant="secondary" className="bg-white text-vet-primary hover:bg-vet-light hover:scale-105 transition-all duration-300">
-            <Link to="/services">View All Services</Link>
+            <Link to="/services">{t('services.viewAll')}</Link>
           </Button>
         </div>
       </section>
