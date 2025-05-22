@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -21,16 +21,16 @@ const AppContent = () => {
   useEffect(() => {
     // Add class to body for page transitions
     document.body.classList.add('animate-slide-up');
-    
+
     const timeout = setTimeout(() => {
       document.body.classList.remove('animate-slide-up');
     }, 1000);
-    
+
     return () => clearTimeout(timeout);
   }, []);
-  
+
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">
@@ -45,7 +45,7 @@ const AppContent = () => {
         </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

@@ -11,7 +11,11 @@ const setFavicon = () => {
   const link = document.querySelector("link[rel*='icon']") as HTMLLinkElement || document.createElement('link');
   link.type = 'image/x-icon';
   link.rel = 'shortcut icon';
-  link.href = '/lovable-uploads/73d66a42-a27a-40a9-8f5f-47f69e48c443.png';
+
+  // Use import.meta.env.BASE_URL for proper path resolution in production and development
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  link.href = `${baseUrl}lovable-uploads/73d66a42-a27a-40a9-8f5f-47f69e48c443.png`;
+
   document.head.appendChild(link);
 };
 

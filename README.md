@@ -62,12 +62,35 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### Option 1: Using Lovable
+
 Simply open [Lovable](https://lovable.dev/projects/59c08bc6-c9eb-425b-b1ef-78fdf0d67901) and click on Share -> Publish.
+
+### Option 2: Using GitHub Pages
+
+This project is configured to be deployed to GitHub Pages using GitHub Actions. When you push changes to the `main` branch, the site will be automatically built and deployed.
+
+To set up GitHub Pages deployment:
+
+1. Go to your GitHub repository settings
+2. Navigate to "Pages" in the sidebar
+3. Under "Build and deployment", select "GitHub Actions" as the source
+4. The site will be available at `https://[your-username].github.io/sos-vet-website-rabat/`
 
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+## Can I connect a custom domain to GitHub Pages?
+
+Yes, you can connect a custom domain to your GitHub Pages site:
+
+1. Go to your GitHub repository settings
+2. Navigate to "Pages" in the sidebar
+3. Under "Custom domain", enter your domain name
+4. Update your domain's DNS settings to point to GitHub Pages
+5. For more details, see [GitHub's documentation on custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)

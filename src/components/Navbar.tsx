@@ -29,9 +29,9 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/73d66a42-a27a-40a9-8f5f-47f69e48c443.png" 
-                alt="SOS Vet Logo" 
+              <img
+                src={`${import.meta.env.BASE_URL || '/'}lovable-uploads/73d66a42-a27a-40a9-8f5f-47f69e48c443.png`}
+                alt="SOS Vet Logo"
                 className="h-10 w-auto transition-all hover:scale-105 duration-300"
               />
             </Link>
@@ -52,7 +52,7 @@ const Navbar = () => {
                 {t(`nav.${item.key}`)}
               </Link>
             ))}
-            
+
             {/* Language Switcher */}
             <div className="flex items-center space-x-2 ml-4">
               <Button
@@ -105,7 +105,7 @@ const Navbar = () => {
                   {t(`nav.${item.key}`)}
                 </Link>
               ))}
-              
+
               {/* Mobile Language Switcher */}
               <div className="flex items-center space-x-2 px-3 py-2">
                 <span className="text-sm text-gray-600">{language === 'en' ? 'Language:' : 'Langue:'}</span>
