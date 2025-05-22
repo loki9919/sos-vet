@@ -9,11 +9,16 @@ const About = () => {
   const teamMembers = [
     {
       name: 'Dr. Zineb Bennani',
-      title: 'Lead Veterinarian',
-      experience: '15',
-      image: '/dr-zineb-bennani.jpg',
-      specialties: ['Surgery', 'Internal Medicine', 'Emergency Care', 'Preventive Medicine'],
-      description: 'Dr. Zineb Bennani is a highly skilled veterinarian with over 10 years of experience in animal healthcare. She is dedicated to providing compassionate and comprehensive care for all animals, with special expertise in surgery and emergency medicine.'
+      title: t('about.doctorTitle'),
+      experience: '10',
+      image: '/dr-zineb-bennani.png',
+      specialties: [
+        t('about.specialties.surgery'),
+        t('about.specialties.internalMedicine'),
+        t('about.specialties.emergencyCare'),
+        t('about.specialties.preventiveMedicine')
+      ],
+      description: t('about.doctorDescription')
     }
   ];
 
@@ -58,7 +63,7 @@ const About = () => {
               {t('about.team')}
             </h2>
             <p className="text-lg text-gray-600">
-              Meet our lead veterinarian who provides exceptional care for your beloved pets
+              {t('about.teamDescription')}
             </p>
           </div>
 
@@ -111,7 +116,7 @@ const About = () => {
               <div className="text-green-100">Happy Pets Treated</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">15+</div>
+              <div className="text-4xl font-bold mb-2">10+</div>
               <div className="text-green-100">Years of Experience</div>
             </div>
             <div>

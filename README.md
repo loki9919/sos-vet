@@ -100,7 +100,7 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-trick
 Please upload the image of Dr. Zineb Bennani to the following location:
 
 ```
-public/dr-zineb-bennani.jpg
+public/dr-zineb-bennani.png
 ```
 
 This image will be displayed on the About page in the "Our Team" section.

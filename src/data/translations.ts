@@ -60,7 +60,16 @@ export const translations = {
       whyChooseDesc: 'We\'re committed to providing the best possible care for your beloved pets with our experienced team and modern facilities.',
       team: 'Meet Dr. Zineb Bennani',
       experience: 'years of experience',
-      impact: 'Our Impact'
+      impact: 'Our Impact',
+      doctorDescription: 'Dr. Zineb Bennani is a highly skilled veterinarian with over 10 years of experience in animal healthcare. She is dedicated to providing compassionate and comprehensive care for all animals, with special expertise in surgery and emergency medicine.',
+      teamDescription: 'Meet our lead veterinarian who provides exceptional care for your beloved pets',
+      doctorTitle: 'Lead Veterinarian',
+      specialties: {
+        surgery: 'Surgery',
+        internalMedicine: 'Internal Medicine',
+        emergencyCare: 'Emergency Care',
+        preventiveMedicine: 'Preventive Medicine'
+      }
     },
     contact: {
       title: 'Contact Us',
@@ -170,7 +179,16 @@ export const translations = {
       whyChooseDesc: 'Nous nous engageons à fournir les meilleurs soins possibles pour vos animaux bien-aimés avec notre équipe expérimentée et nos installations modernes.',
       team: 'Rencontrez Dr. Zineb Bennani',
       experience: 'années d\'expérience',
-      impact: 'Notre Impact'
+      impact: 'Notre Impact',
+      doctorDescription: 'Dr. Zineb Bennani est une vétérinaire hautement qualifiée avec plus de 10 ans d\'expérience dans les soins de santé animale. Elle se consacre à fournir des soins compatissants et complets pour tous les animaux, avec une expertise particulière en chirurgie et en médecine d\'urgence.',
+      teamDescription: 'Rencontrez notre vétérinaire principale qui fournit des soins exceptionnels pour vos animaux bien-aimés',
+      doctorTitle: 'Vétérinaire en Chef',
+      specialties: {
+        surgery: 'Chirurgie',
+        internalMedicine: 'Médecine Interne',
+        emergencyCare: 'Soins d\'Urgence',
+        preventiveMedicine: 'Médecine Préventive'
+      }
     },
     contact: {
       title: 'Nous Contacter',
