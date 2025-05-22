@@ -21,10 +21,14 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <img 
-                src="/logo.png" 
-                alt="SOS Vet Logo" 
+              <img
+                src={`${import.meta.env.BASE_URL}logo.png`}
+                alt="SOS Vet Logo"
                 className="h-12 w-auto"
+                onError={(e) => {
+                  console.error("Logo failed to load:", e);
+                  e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
+                }}
               />
             </div>
             <p className="text-gray-700 mb-4">
@@ -32,7 +36,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center text-gray-700">
               <MapPin className="w-4 h-4 mr-2" />
-              <span className="text-sm">Rabat, Morocco</span>
+              <span className="text-sm">{t('contact.location')}</span>
             </div>
           </div>
 
@@ -66,9 +70,19 @@ const Footer = () => {
                 <Mail className="w-4 h-4 mr-2" />
                 <span>info@sosvet.ma</span>
               </div>
-              <div className="flex items-center text-gray-700 text-sm hover:text-vet-primary transition-all duration-300">
-                <MapPin className="w-4 h-4 mr-2" />
-                <span>Avenue Mohammed V, Rabat</span>
+              <div className="flex items-start text-gray-700 text-sm hover:text-vet-primary transition-all duration-300">
+                <MapPin className="w-4 h-4 mr-2 mt-1" />
+                <div>
+                  <span>{t('contact.location')}</span>
+                  <a
+                    href="https://www.google.com/maps/place/SOS+V%C3%A9t%C3%A9rinaire+%C3%A0+domicile+Rabat/@33.9382018,-6.9692213,13z/data=!4m10!1m2!2m1!1ssos+vet+rabat!3m6!1s0xda7132be74a4c3f:0xfe9e567cd0ce6066!8m2!3d33.9382018!4d-6.8930036!15sCg1zb3MgdmV0IHJhYmF0Wg8iDXNvcyB2ZXQgcmFiYXSSAQx2ZXRlcmluYXJpYW6aASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUmtjbkEzVTNwM1JSQUKqAUUKDS9nLzExc2hwczA2czcQATIfEAEiG9vAv8QYSWOmqubBVCoEh2FZ3KztvrJYOW_YyDIREAIiDXNvcyB2ZXQgcmFiYXTgAQD6AQQILBBK!16s%2Fg%2F11ng6gjk4b?entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-vet-primary text-xs mt-1 hover:underline"
+                  >
+                    {t('contact.viewOnGoogleMaps')}
+                  </a>
+                </div>
               </div>
             </div>
           </div>

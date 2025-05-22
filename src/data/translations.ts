@@ -93,7 +93,10 @@ export const translations = {
       emergencyServices: 'Emergency Services Available 24/7',
       emergencyDescription: 'If your pet is experiencing a medical emergency, please contact us immediately or visit our clinic.',
       emergencyContact: 'Emergency Contact',
-      call: 'Call'
+      call: 'Call',
+      viewOnGoogleMaps: 'View on Google Maps',
+      getDirections: 'Get Directions',
+      location: 'SOS Vétérinaire à domicile Rabat, Morocco'
     },
     cta: {
       title: 'Ready to Give Your Pet the Best Care?',
@@ -214,7 +217,10 @@ export const translations = {
       emergencyServices: 'Services d\'Urgence Disponibles 24/7',
       emergencyDescription: 'Si votre animal est confronté à une urgence médicale, veuillez nous contacter immédiatement ou visiter notre clinique.',
       emergencyContact: 'Contact d\'Urgence',
-      call: 'Appeler'
+      call: 'Appeler',
+      viewOnGoogleMaps: 'Voir sur Google Maps',
+      getDirections: 'Obtenir l\'itinéraire',
+      location: 'SOS Vétérinaire à domicile Rabat, Maroc'
     },
     cta: {
       title: 'Prêt à Offrir les Meilleurs Soins à Votre Animal?',

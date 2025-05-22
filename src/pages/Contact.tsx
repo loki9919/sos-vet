@@ -42,7 +42,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: t('contact.address'),
-      content: 'Avenue Mohammed V, Rabat 10000, Morocco'
+      content: t('contact.location')
     },
     {
       icon: Phone,
@@ -78,7 +78,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div>
             <h2 className="text-2xl font-bold text-vet-secondary mb-8">Get in Touch</h2>
-            
+
             <div className="space-y-6 mb-8">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -88,17 +88,46 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-vet-secondary mb-1">{info.title}</h3>
                     <p className="text-gray-600 whitespace-pre-line">{info.content}</p>
+                    {info.title === t('contact.address') && (
+                      <a
+                        href="https://www.google.com/maps/place/SOS+V%C3%A9t%C3%A9rinaire+%C3%A0+domicile+Rabat/@33.9382018,-6.9692213,13z/data=!4m10!1m2!2m1!1ssos+vet+rabat!3m6!1s0xda7132be74a4c3f:0xfe9e567cd0ce6066!8m2!3d33.9382018!4d-6.8930036!15sCg1zb3MgdmV0IHJhYmF0Wg8iDXNvcyB2ZXQgcmFiYXSSAQx2ZXRlcmluYXJpYW6aASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUmtjbkEzVTNwM1JSQUKqAUUKDS9nLzExc2hwczA2czcQATIfEAEiG9vAv8QYSWOmqubBVCoEh2FZ3KztvrJYOW_YyDIREAIiDXNvcyB2ZXQgcmFiYXTgAQD6AQQILBBK!16s%2Fg%2F11ng6gjk4b?entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-vet-primary text-sm hover:underline inline-block mt-1"
+                      >
+                        {t('contact.viewOnGoogleMaps')}
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Map */}
-            <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <MapPin className="w-12 h-12 mx-auto mb-2" />
-                <p>Interactive Map</p>
-                <p className="text-sm">Rabat, Morocco</p>
+            <div className="space-y-4">
+              <div className="rounded-lg h-80 overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.5762860976033!2d-6.895192324999999!3d33.938201800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7132be74a4c3f%3A0xfe9e567cd0ce6066!2sSOS%20V%C3%A9t%C3%A9rinaire%20%C3%A0%20domicile%20Rabat!5e0!3m2!1sen!2sus!4v1716410000000!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="SOS Vet Rabat Location"
+                  className="rounded-lg"
+                ></iframe>
+              </div>
+              <div className="flex justify-center">
+                <Button asChild className="bg-vet-primary hover:bg-vet-primary/90">
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=SOS+V%C3%A9t%C3%A9rinaire+%C3%A0+domicile+Rabat&destination_place_id=ChIJP0x0dL4TpA0RZmDOzW3W6f4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t('contact.getDirections')}
+                  </a>
+                </Button>
               </div>
             </div>
           </div>

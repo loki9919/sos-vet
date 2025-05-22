@@ -30,9 +30,13 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <img
-                src={`${import.meta.env.BASE_URL || '/'}/logo.png`}
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="SOS Vet Logo"
                 className="h-10 w-auto transition-all hover:scale-105 duration-300"
+                onError={(e) => {
+                  console.error("Logo failed to load:", e);
+                  e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
+                }}
               />
             </Link>
           </div>

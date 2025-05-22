@@ -14,7 +14,7 @@ const setFavicon = () => {
 
   // Use import.meta.env.BASE_URL for proper path resolution in production and development
   const baseUrl = import.meta.env.BASE_URL || '/';
-  link.href = `${baseUrl}/logo.png`;
+  link.href = `${baseUrl}logo.png`;
 
   document.head.appendChild(link);
 };
