@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Heart, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -15,16 +15,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-vet-secondary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-                <Heart className="w-5 h-5 text-white" fill="currentColor" />
-              </div>
-              <span className="text-xl font-bold">SOS Vet</span>
+              <img 
+                src="/lovable-uploads/73d66a42-a27a-40a9-8f5f-47f69e48c443.png" 
+                alt="SOS Vet Logo" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-gray-300 mb-4">
               {t('footer.tagline')}
@@ -43,8 +44,9 @@ const Footer = () => {
                 <li key={link.key}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-green-400 transition-colors text-sm"
+                    className="text-gray-300 hover:text-vet-primary transition-colors duration-300 text-sm group flex items-center"
                   >
+                    <span className="inline-block w-0 group-hover:w-2 transition-all duration-300 h-0.5 bg-vet-primary mr-0 group-hover:mr-2"></span>
                     {t(`nav.${link.key}`)}
                   </Link>
                 </li>
@@ -56,15 +58,15 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('footer.contact')}</h3>
             <div className="space-y-2">
-              <div className="flex items-center text-gray-300 text-sm">
+              <div className="flex items-center text-gray-300 text-sm hover:text-vet-primary transition-all duration-300">
                 <Phone className="w-4 h-4 mr-2" />
                 <span>+212 537-XX-XX-XX</span>
               </div>
-              <div className="flex items-center text-gray-300 text-sm">
+              <div className="flex items-center text-gray-300 text-sm hover:text-vet-primary transition-all duration-300">
                 <Mail className="w-4 h-4 mr-2" />
                 <span>info@sosvet.ma</span>
               </div>
-              <div className="flex items-center text-gray-300 text-sm">
+              <div className="flex items-center text-gray-300 text-sm hover:text-vet-primary transition-all duration-300">
                 <MapPin className="w-4 h-4 mr-2" />
                 <span>Avenue Mohammed V, Rabat</span>
               </div>
@@ -80,7 +82,7 @@ const Footer = () => {
                 <div>
                   <div>Mon-Fri: 8AM-8PM</div>
                   <div>Sat-Sun: 9AM-6PM</div>
-                  <div className="text-green-400 font-semibold">Emergency: 24/7</div>
+                  <div className="text-vet-primary font-semibold">Emergency: 24/7</div>
                 </div>
               </div>
             </div>

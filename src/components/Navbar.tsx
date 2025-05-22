@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from './ui/button';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,10 +29,11 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-                <Heart className="w-5 h-5 text-white" fill="currentColor" />
-              </div>
-              <span className="text-xl font-bold text-green-800">SOS Vet</span>
+              <img 
+                src="/lovable-uploads/73d66a42-a27a-40a9-8f5f-47f69e48c443.png" 
+                alt="SOS Vet Logo" 
+                className="h-10 w-auto transition-all hover:scale-105 duration-300"
+              />
             </Link>
           </div>
 
@@ -42,10 +43,10 @@ const Navbar = () => {
               <Link
                 key={item.key}
                 to={item.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 ${
                   isActivePath(item.path)
-                    ? 'text-green-600 bg-green-50'
-                    : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                    ? 'text-vet-primary bg-vet-light'
+                    : 'text-gray-700 hover:text-vet-primary hover:bg-vet-light'
                 }`}
               >
                 {t(`nav.${item.key}`)}
@@ -58,7 +59,7 @@ const Navbar = () => {
                 variant={language === 'en' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setLanguage('en')}
-                className="text-xs"
+                className={`text-xs transition-transform duration-300 hover:scale-105 ${language === 'en' ? 'bg-vet-primary' : 'border-vet-primary text-vet-primary'}`}
               >
                 EN
               </Button>
@@ -66,7 +67,7 @@ const Navbar = () => {
                 variant={language === 'fr' ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setLanguage('fr')}
-                className="text-xs"
+                className={`text-xs transition-transform duration-300 hover:scale-105 ${language === 'fr' ? 'bg-vet-primary' : 'border-vet-primary text-vet-primary'}`}
               >
                 FR
               </Button>
@@ -79,6 +80,7 @@ const Navbar = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-vet-primary"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -88,15 +90,15 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 animate-slide-up">
               {navigationItems.map((item) => (
                 <Link
                   key={item.key}
                   to={item.path}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
                     isActivePath(item.path)
-                      ? 'text-green-600 bg-green-100'
-                      : 'text-gray-700 hover:text-green-600 hover:bg-green-100'
+                      ? 'text-vet-primary bg-vet-light'
+                      : 'text-gray-700 hover:text-vet-primary hover:bg-vet-light'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -106,12 +108,12 @@ const Navbar = () => {
               
               {/* Mobile Language Switcher */}
               <div className="flex items-center space-x-2 px-3 py-2">
-                <span className="text-sm text-gray-600">Language:</span>
+                <span className="text-sm text-gray-600">{language === 'en' ? 'Language:' : 'Langue:'}</span>
                 <Button
                   variant={language === 'en' ? 'default' : 'outline'}
                   size="sm"
                   onClick={() => setLanguage('en')}
-                  className="text-xs"
+                  className={`text-xs ${language === 'en' ? 'bg-vet-primary' : 'border-vet-primary text-vet-primary'}`}
                 >
                   EN
                 </Button>
@@ -119,7 +121,7 @@ const Navbar = () => {
                   variant={language === 'fr' ? 'default' : 'outline'}
                   size="sm"
                   onClick={() => setLanguage('fr')}
-                  className="text-xs"
+                  className={`text-xs ${language === 'fr' ? 'bg-vet-primary' : 'border-vet-primary text-vet-primary'}`}
                 >
                   FR
                 </Button>

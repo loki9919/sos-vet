@@ -45,18 +45,18 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl lg:text-5xl font-bold text-vet-secondary mb-6 animate-slide-up">
             {t('services.title')}
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.2s' }}>
             {t('services.subtitle')}
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service) => (
-            <Card key={service.key} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
+          {services.map((service, index) => (
+            <Card key={service.key} className="group hover:shadow-xl transition-all duration-300 overflow-hidden animate-slide-up" style={{ animationDelay: `${0.1 * index}s` }}>
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={service.image}
@@ -69,7 +69,7 @@ const Services = () => {
                 </div>
               </div>
               <CardHeader>
-                <CardTitle className="text-xl text-gray-900">
+                <CardTitle className="text-xl text-vet-secondary group-hover:text-vet-primary transition-colors duration-300">
                   {t(`services.${service.key}.title`)}
                 </CardTitle>
               </CardHeader>
@@ -77,8 +77,8 @@ const Services = () => {
                 <p className="text-gray-600 mb-4">
                   {t(`services.${service.key}.description`)}
                 </p>
-                <Button variant="outline" className="w-full group-hover:bg-green-600 group-hover:text-white transition-colors">
-                  Learn More
+                <Button variant="outline" className="w-full group-hover:bg-vet-primary group-hover:text-white transition-colors duration-300 border-vet-primary text-vet-primary">
+                  {t('services.learnMore')}
                 </Button>
               </CardContent>
             </Card>
@@ -86,19 +86,19 @@ const Services = () => {
         </div>
 
         {/* Emergency Contact Section */}
-        <div className="bg-red-50 border border-red-200 rounded-lg p-8 text-center">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-8 text-center animate-slide-up">
           <h2 className="text-2xl font-bold text-red-800 mb-4">
-            Emergency Services Available 24/7
+            {t('contact.emergencyServices')}
           </h2>
           <p className="text-red-700 mb-6">
-            If your pet is experiencing a medical emergency, please contact us immediately or visit our clinic.
+            {t('contact.emergencyDescription')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-red-600 hover:bg-red-700" size="lg">
-              <Link to="/contact">Emergency Contact</Link>
+            <Button className="bg-red-600 hover:bg-red-700 hover:scale-105 transition-all duration-300" size="lg">
+              <Link to="/contact">{t('contact.emergencyContact')}</Link>
             </Button>
-            <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50" size="lg">
-              Call: +212 537-XX-XX-XX
+            <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50 hover:scale-105 transition-all duration-300" size="lg">
+              {t('contact.call')}: +212 537-XX-XX-XX
             </Button>
           </div>
         </div>

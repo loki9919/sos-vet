@@ -41,11 +41,15 @@ export const translations = {
       grooming: {
         title: 'Pet Grooming',
         description: 'Professional grooming services to keep your pet looking their best'
-      }
+      },
+      learnMore: 'Learn More'
     },
     gallery: {
       title: 'Our Gallery',
-      subtitle: 'See our clinic and happy pets'
+      subtitle: 'See our clinic and happy pets',
+      readyToVisit: 'Ready to Visit Our Clinic?',
+      visitDescription: 'Experience our modern facilities and compassionate care firsthand.',
+      scheduleVisit: 'Schedule a Visit'
     },
     about: {
       title: 'About SOS Vet',
@@ -70,7 +74,29 @@ export const translations = {
         service: 'Service Needed',
         message: 'Message',
         submit: 'Send Request'
-      }
+      },
+      emergencyServices: 'Emergency Services Available 24/7',
+      emergencyDescription: 'If your pet is experiencing a medical emergency, please contact us immediately or visit our clinic.',
+      emergencyContact: 'Emergency Contact',
+      call: 'Call'
+    },
+    cta: {
+      title: 'Ready to Give Your Pet the Best Care?',
+      subtitle: 'Contact us today to schedule an appointment or learn more about our services.',
+      bookAppointment: 'Book Appointment',
+      learnMore: 'Learn More About Us'
+    },
+    features: {
+      compassionateCare: 'Compassionate Care',
+      compassionateCareDesc: 'We treat every pet with love and care as if they were our own family members.',
+      professionalService: 'Professional Service',
+      professionalServiceDesc: 'Our experienced veterinarians provide the highest quality medical care.',
+      emergencyService: '24/7 Emergency',
+      emergencyServiceDesc: 'Round-the-clock emergency services for urgent pet health situations.',
+      trustedExpertise: 'Trusted Expertise',
+      trustedExpertiseDesc: 'Years of experience serving the Rabat community with excellence.',
+      happyPets: 'Happy Pets',
+      yearsExperience: 'Years Experience'
     },
     footer: {
       tagline: 'Caring for your pets with love and expertise',
@@ -121,11 +147,15 @@ export const translations = {
       grooming: {
         title: 'Toilettage',
         description: 'Services de toilettage professionnel pour que votre animal soit à son meilleur'
-      }
+      },
+      learnMore: 'En Savoir Plus'
     },
     gallery: {
       title: 'Notre Galerie',
-      subtitle: 'Découvrez notre clinique et nos animaux heureux'
+      subtitle: 'Découvrez notre clinique et nos animaux heureux',
+      readyToVisit: 'Prêt à Visiter Notre Clinique?',
+      visitDescription: 'Découvrez nos installations modernes et nos soins compatissants en personne.',
+      scheduleVisit: 'Planifier une Visite'
     },
     about: {
       title: 'À Propos de SOS Vet',
@@ -150,7 +180,29 @@ export const translations = {
         service: 'Service Requis',
         message: 'Message',
         submit: 'Envoyer la Demande'
-      }
+      },
+      emergencyServices: 'Services d\'Urgence Disponibles 24/7',
+      emergencyDescription: 'Si votre animal est confronté à une urgence médicale, veuillez nous contacter immédiatement ou visiter notre clinique.',
+      emergencyContact: 'Contact d\'Urgence',
+      call: 'Appeler'
+    },
+    cta: {
+      title: 'Prêt à Offrir les Meilleurs Soins à Votre Animal?',
+      subtitle: 'Contactez-nous aujourd\'hui pour planifier un rendez-vous ou en savoir plus sur nos services.',
+      bookAppointment: 'Prendre Rendez-vous',
+      learnMore: 'En Savoir Plus Sur Nous'
+    },
+    features: {
+      compassionateCare: 'Soins Compatissants',
+      compassionateCareDesc: 'Nous traitons chaque animal avec amour et attention comme s\'ils étaient membres de notre propre famille.',
+      professionalService: 'Service Professionnel',
+      professionalServiceDesc: 'Nos vétérinaires expérimentés fournissent des soins médicaux de la plus haute qualité.',
+      emergencyService: 'Urgence 24/7',
+      emergencyServiceDesc: 'Services d\'urgence jour et nuit pour les situations de santé urgentes des animaux.',
+      trustedExpertise: 'Expertise Fiable',
+      trustedExpertiseDesc: 'Des années d\'expérience au service de la communauté de Rabat avec excellence.',
+      happyPets: 'Animaux Heureux',
+      yearsExperience: 'Ans d\'Expérience'
     },
     footer: {
       tagline: 'Prendre soin de vos animaux avec amour et expertise',

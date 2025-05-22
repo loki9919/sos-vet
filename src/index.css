@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,59 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  body.language-transition * {
+    @apply transition-opacity duration-300;
+    animation: fadeInTranslation 0.5s ease;
+  }
+}
+
+@keyframes fadeInTranslation {
+  0% {
+    opacity: 0.7;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Micro animations */
+.hover-grow {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.hover-text {
+  @apply transition-colors duration-300;
+}
+
+.hover-underline {
+  @apply relative inline-block;
+}
+
+.hover-underline:after {
+  content: '';
+  @apply absolute w-full scale-x-0 h-0.5 bottom-0 left-0 bg-vet-primary origin-bottom-right transition-transform duration-300;
+}
+
+.hover-underline:hover:after {
+  @apply scale-x-100 origin-bottom-left;
+}
+
+.button-pulse {
+  animation: button-pulse 1.5s infinite;
+}
+
+@keyframes button-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(20, 179, 198, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(20, 179, 198, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(20, 179, 198, 0);
   }
 }
