@@ -30,7 +30,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <img
-                src={`${import.meta.env.BASE_URL || '/'}lovable-uploads/73d66a42-a27a-40a9-8f5f-47f69e48c443.png`}
+                src={`${import.meta.env.BASE_URL || '/'}/logo.png`}
                 alt="SOS Vet Logo"
                 className="h-10 w-auto transition-all hover:scale-105 duration-300"
               />

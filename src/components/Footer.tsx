@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <img 
-                src="/lovable-uploads/73d66a42-a27a-40a9-8f5f-47f69e48c443.png" 
+                src="/logo.png" 
                 alt="SOS Vet Logo" 
                 className="h-12 w-auto"
               />
