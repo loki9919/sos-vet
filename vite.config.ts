@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: mode === 'production' ? '/sos-vet-website-rabat/' : '/',
+  base: mode === 'production' ? (process.env.VITE_BASE_URL || '/sos-vet/') : '/',
   plugins: [
     react(),
     mode === 'development' &&
