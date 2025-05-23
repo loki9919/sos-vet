@@ -126,6 +126,16 @@ public/our _mission.jpg
 ```
 This image will be displayed on the About page in the "Our Mission" section.
 
+5. Gallery images:
+```
+public/can.jpg
+public/cat.jpg
+public/zaza.jpg
+public/berg_all.jpg
+public/kbir.jpg
+```
+These images will be displayed in the Gallery page along with the service images.
+
 **Important Note**: If the images are not displaying correctly, please check:
 1. The image files exist in the public directory
 2. The image files are valid (PNG/JPG)

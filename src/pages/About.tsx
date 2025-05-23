@@ -39,10 +39,10 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('about.missionTitle')}</h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
+            <p className="text-base text-gray-600 leading-relaxed mb-6">
               {t('about.mission')}
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-base text-gray-600 leading-relaxed">
               {t('about.missionExtra')}
             </p>
             <div className="mt-8 flex items-center">

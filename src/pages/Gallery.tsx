@@ -10,49 +10,49 @@ const Gallery = () => {
 
   const galleryImages = [
     {
-      src: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&h=400&fit=crop',
-      alt: 'Happy dog at vet clinic',
+      src: `${import.meta.env.BASE_URL}can.jpg`,
+      alt: 'Dog patient at SOS Vet',
       category: 'patients'
     },
     {
-      src: 'https://images.unsplash.com/photo-1628407690480-22bce8ba8c4b?w=600&h=400&fit=crop',
-      alt: 'Veterinarian examining cat',
-      category: 'clinic'
+      src: `${import.meta.env.BASE_URL}cat.jpg`,
+      alt: 'Cat patient at SOS Vet',
+      category: 'patients'
     },
     {
-      src: 'https://images.unsplash.com/photo-1601758228006-f2a8b6a8e29e?w=600&h=400&fit=crop',
-      alt: 'Modern veterinary equipment',
-      category: 'facility'
+      src: `${import.meta.env.BASE_URL}zaza.jpg`,
+      alt: 'Zaza at SOS Vet',
+      category: 'patients'
     },
     {
-      src: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=400&fit=crop',
-      alt: 'Pet dental care',
+      src: `${import.meta.env.BASE_URL}berg_all.jpg`,
+      alt: 'Berg at SOS Vet',
+      category: 'patients'
+    },
+    {
+      src: `${import.meta.env.BASE_URL}kbir.jpg`,
+      alt: 'Kbir at SOS Vet',
+      category: 'patients'
+    },
+    {
+      src: `${import.meta.env.BASE_URL}Wellness_Exams.jpg`,
+      alt: 'Wellness examination at SOS Vet',
       category: 'services'
     },
     {
-      src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
-      alt: 'Pet grooming services',
+      src: `${import.meta.env.BASE_URL}acceuil.jpg`,
+      alt: 'SOS Vet Rabat clinic',
+      category: 'facility'
+    },
+    {
+      src: `${import.meta.env.BASE_URL}Emergency_Care.jpg`,
+      alt: 'Emergency care at SOS Vet',
       category: 'services'
     },
     {
-      src: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=400&fit=crop',
-      alt: 'Cute kitten patient',
-      category: 'patients'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop',
-      alt: 'Veterinary surgery room',
-      category: 'facility'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&h=400&fit=crop',
-      alt: 'Happy rabbit patient',
-      category: 'patients'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600&h=400&fit=crop',
-      alt: 'Emergency care facility',
-      category: 'facility'
+      src: `${import.meta.env.BASE_URL}Surgery.jpg`,
+      alt: 'Surgery at SOS Vet',
+      category: 'services'
     }
   ];
 
@@ -92,6 +92,10 @@ const Gallery = () => {
                   alt={image.alt}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
+                  onError={(e) => {
+                    console.error(`Gallery image failed to load: ${image.alt}`, e);
+                    e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
+                  }}
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -126,6 +130,10 @@ const Gallery = () => {
                 src={selectedImage}
                 alt="Gallery image"
                 className="max-w-full max-h-full object-contain rounded-lg animate-scale-in"
+                onError={(e) => {
+                  console.error(`Lightbox image failed to load`, e);
+                  e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
+                }}
               />
             </div>
           </div>
