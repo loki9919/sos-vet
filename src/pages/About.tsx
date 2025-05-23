@@ -45,12 +45,22 @@ const About = () => {
             <p className="text-lg text-gray-600 leading-relaxed">
               {t('about.missionExtra')}
             </p>
+            <div className="mt-8 flex items-center">
+              <div className="w-12 h-1 bg-green-500 mr-4"></div>
+              <p className="text-green-600 font-semibold">SOS Vet Rabat</p>
+            </div>
           </div>
           <div className="relative">
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-green-100 rounded-full opacity-70 z-0"></div>
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-100 rounded-full opacity-70 z-0"></div>
             <img
-              src="https://images.unsplash.com/photo-1628407690480-22bce8ba8c4b?w=600&h=400&fit=crop"
-              alt="Veterinarian caring for pet"
-              className="rounded-lg shadow-lg"
+              src={`${import.meta.env.BASE_URL}our _mission.jpg`}
+              alt="SOS Vet Rabat mission"
+              className="rounded-lg shadow-lg relative z-10"
+              onError={(e) => {
+                console.error("Mission image failed to load:", e);
+                e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
+              }}
             />
           </div>
         </div>

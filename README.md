@@ -120,6 +120,12 @@ public/Emergency_Care.jpg
 ```
 These images will be displayed on the Services page and Home page for each service.
 
+4. Mission image:
+```
+public/our _mission.jpg
+```
+This image will be displayed on the About page in the "Our Mission" section.
+
 **Important Note**: If the images are not displaying correctly, please check:
 1. The image files exist in the public directory
 2. The image files are valid (PNG/JPG)
