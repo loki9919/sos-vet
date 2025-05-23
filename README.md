@@ -97,16 +97,31 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-trick
 
 ## Image Upload Instructions
 
-Please upload the image of Dr. Zineb Bennani to the following location:
+Please upload the following images to the public directory:
 
+1. Dr. Zineb Bennani's profile picture:
 ```
 public/dr-zineb-bennani.png
 ```
-
 This image will be displayed on the About page in the "Our Team" section.
 
-**Important Note**: If the image is not displaying correctly, please check:
-1. The image file exists in the public directory
-2. The image file is a valid PNG image
-3. The image file has the correct permissions
+2. Home page main image:
+```
+public/acceuil.jpg
+```
+This image will be displayed on the Home page as the main hero image.
+
+3. Service images:
+```
+public/Wellness_Exams.jpg
+public/Vaccinations.jpg
+public/Surgery.jpg
+public/Emergency_Care.jpg
+```
+These images will be displayed on the Services page and Home page for each service.
+
+**Important Note**: If the images are not displaying correctly, please check:
+1. The image files exist in the public directory
+2. The image files are valid (PNG/JPG)
+3. The image files have the correct permissions
 4. Try clearing your browser cache or using a private/incognito window

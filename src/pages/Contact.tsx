@@ -199,12 +199,10 @@ const Contact = () => {
                         <SelectValue placeholder="Select a service" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="wellness">Wellness Exam</SelectItem>
-                        <SelectItem value="vaccination">Vaccination</SelectItem>
-                        <SelectItem value="surgery">Surgery</SelectItem>
-                        <SelectItem value="dental">Dental Care</SelectItem>
-                        <SelectItem value="emergency">Emergency</SelectItem>
-                        <SelectItem value="grooming">Grooming</SelectItem>
+                        <SelectItem value="wellness">{t('services.wellness.title')}</SelectItem>
+                        <SelectItem value="vaccination">{t('services.vaccination.title')}</SelectItem>
+                        <SelectItem value="surgery">{t('services.surgery.title')}</SelectItem>
+                        <SelectItem value="emergency">{t('services.emergency.title')}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>

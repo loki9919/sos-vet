@@ -59,9 +59,13 @@ const Home = () => {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl animate-pulse-gentle">
                 <img
-                  src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&h=600&fit=crop&crop=center"
-                  alt="Happy pets at veterinary clinic"
+                  src={`${import.meta.env.BASE_URL}acceuil.jpg`}
+                  alt="SOS Vet Rabat clinic"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    console.error("Home image failed to load:", e);
+                    e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
+                  }}
                 />
               </div>
               {/* Floating cards */}
@@ -74,7 +78,7 @@ const Home = () => {
               <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg animate-float" style={{ animationDelay: '2s' }}>
                 <div className="flex items-center space-x-2">
                   <Award className="w-6 h-6 text-vet-primary" />
-                  <span className="font-semibold">15+ {t('features.yearsExperience')}</span>
+                  <span className="font-semibold">10+ {t('features.yearsExperience')}</span>
                 </div>
               </div>
             </div>
@@ -93,7 +97,7 @@ const Home = () => {
               {t('about.whyChooseDesc')}
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 border-vet-light group hover:border-vet-primary">
@@ -116,16 +120,107 @@ const Home = () => {
 
       {/* Quick Services Preview */}
       <section className="py-20 bg-gradient-to-r from-vet-primary to-vet-secondary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8">
-            {t('services.title')}
-          </h2>
-          <p className="text-xl text-vet-light mb-12 max-w-2xl mx-auto">
-            {t('services.subtitle')}
-          </p>
-          <Button asChild size="lg" variant="secondary" className="bg-white text-vet-primary hover:bg-vet-light hover:scale-105 transition-all duration-300">
-            <Link to="/services">{t('services.viewAll')}</Link>
-          </Button>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8">
+              {t('services.title')}
+            </h2>
+            <p className="text-xl text-vet-light mb-8 max-w-2xl mx-auto">
+              {t('services.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <Link to="/services" className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105">
+              <div className="h-40 relative">
+                <img
+                  src={`${import.meta.env.BASE_URL}Wellness_Exams.jpg`}
+                  alt={t('services.wellness.title')}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute bottom-2 left-2">
+                  <span className="text-2xl">🩺</span>
+                </div>
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-vet-secondary mb-1">{t('services.wellness.title')}</h3>
+                <p className="text-gray-600 text-xs">{t('services.wellness.description')}</p>
+              </div>
+            </Link>
+
+            <Link to="/services" className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105">
+              <div className="h-40 relative">
+                <img
+                  src={`${import.meta.env.BASE_URL}Vaccinations.jpg`}
+                  alt={t('services.vaccination.title')}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute bottom-2 left-2">
+                  <span className="text-2xl">💉</span>
+                </div>
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-vet-secondary mb-1">{t('services.vaccination.title')}</h3>
+                <p className="text-gray-600 text-xs">{t('services.vaccination.description')}</p>
+              </div>
+            </Link>
+
+            <Link to="/services" className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105">
+              <div className="h-40 relative">
+                <img
+                  src={`${import.meta.env.BASE_URL}Surgery.jpg`}
+                  alt={t('services.surgery.title')}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute bottom-2 left-2">
+                  <span className="text-2xl">⚕️</span>
+                </div>
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-vet-secondary mb-1">{t('services.surgery.title')}</h3>
+                <p className="text-gray-600 text-xs">{t('services.surgery.description')}</p>
+              </div>
+            </Link>
+
+            <Link to="/services" className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105">
+              <div className="h-40 relative">
+                <img
+                  src={`${import.meta.env.BASE_URL}Emergency_Care.jpg`}
+                  alt={t('services.emergency.title')}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = `${import.meta.env.BASE_URL}placeholder.svg`;
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute bottom-2 left-2">
+                  <span className="text-2xl">🚨</span>
+                </div>
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-semibold text-vet-secondary mb-1">{t('services.emergency.title')}</h3>
+                <p className="text-gray-600 text-xs">{t('services.emergency.description')}</p>
+              </div>
+            </Link>
+          </div>
+
+          <div className="text-center">
+            <Button asChild size="lg" variant="secondary" className="bg-white text-vet-primary hover:bg-vet-light hover:scale-105 transition-all duration-300">
+              <Link to="/services">{t('services.viewAll')}</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
